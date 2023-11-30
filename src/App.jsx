@@ -12,18 +12,17 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(api);
+        const response = await fetch(url);
         const tours = await response.json();
-        setData(tours);
         console.log(tours);
-        console.log(data);
+        setData(tours);
       } catch (error) {
         console.log(error);
         setIsError(true);
       }
       setIsLoading(false);
     };
-    // fetchData();
+    fetchData();
   }, []);
 
   const reloadTours = () => {

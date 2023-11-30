@@ -2,8 +2,9 @@ import { useState } from "react";
 import Tour from "./Tour";
 
 const Tours = ({ array }) => {
-  array = [{}, {}, {}];
+  //   array = [{}, {}, {}];
   const [data, setData] = useState(array);
+  console.log(data);
 
   const removeTour = (index) => {
     let newArr = [...data];
