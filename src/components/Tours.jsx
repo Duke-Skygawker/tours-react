@@ -5,8 +5,8 @@ const Tours = ({ data }) => {
   // setData(dataArr);
   return (
     <>
-      {data.map((tour) => {
-        return <Tour {...tour} key={tour.id} />;
+      {data.map((tour, index) => {
+        return <Tour {...tour} key={tour.id || index} />;
       })}
     </>
   );

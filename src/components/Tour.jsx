@@ -1,8 +1,10 @@
+import logo from "../../public/vite.svg";
+
 const Tour = ({ name, info, image, price, removeThis }) => {
   return (
     <article>
       <div>
-        <img src={image} alt={name} />
+        <img src={image || logo} alt={name} />
         <p>{price}</p>
       </div>
       <div>
