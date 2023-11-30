@@ -306,7 +306,17 @@ main {
   margin-bottom: 1.25rem;
   line-height: 1.5;
   color: var(--grey-500);
+  overflow: hidden;
 }
+
+.collapsed {
+	max-height:6rem;
+}
+
+.expanded {
+	max-height:20rem;
+}
+
 .info-btn,
 .delete-btn {
   background: transparent;
@@ -322,6 +332,8 @@ main {
 .delete-btn {
   border: 1px solid var(--primary-500);
   color: var(--primary-500);
+  width: 100%;
+  margin: 1rem auto 0 auto;
 }
 .delete-btn:hover {
   background: var(--primary-500);

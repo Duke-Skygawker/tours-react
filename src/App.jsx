@@ -32,23 +32,25 @@ const App = () => {
 
   return (
     <>
-      <button
-        className="btn"
-        type="button"
-        onClick={() => setIsLoading(!isLoading)}
-      >
-        Loading Swap
-      </button>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <div>
-          <Tours {...data} />
-          <button className="btn" type="button" onClick={reloadTours}>
-            Reload Tour Offers
-          </button>
-        </div>
-      )}
+      <main>
+        <button
+          className="btn"
+          type="button"
+          onClick={() => setIsLoading(!isLoading)}
+        >
+          Loading Swap
+        </button>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <div>
+            <Tours {...data} />
+            <button className="btn" type="button" onClick={reloadTours}>
+              Reload Tour Offers
+            </button>
+          </div>
+        )}
+      </main>
     </>
   );
 };

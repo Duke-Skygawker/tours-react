@@ -1,8 +1,8 @@
 import logo from "../../public/vite.svg";
 const Loading = () => {
   return (
-    <div className="container">
-      <img src={logo} alt="" />
+    <div className="title">
+      <p className="loading"></p>
       <h1>Loading ... </h1>
     </div>
   );

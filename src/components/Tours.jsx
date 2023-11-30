@@ -1,13 +1,30 @@
+import { useState } from "react";
 import Tour from "./Tour";
 
-const Tours = ({ data }) => {
-  data = [{}, {}, {}];
-  // setData(dataArr);
+const Tours = ({ array }) => {
+  array = [{}, {}, {}];
+  const [data, setData] = useState(array);
+
+  const removeTour = (index) => {
+    let newArr = [...data];
+    newArr.splice(index, 1);
+    setData(newArr);
+  };
+
   return (
     <>
-      {data.map((tour, index) => {
-        return <Tour {...tour} key={tour.id || index} />;
-      })}
+      <section className="tours">
+        {data.map((tour, index) => {
+          return (
+            <Tour
+              {...tour}
+              key={tour.id || index}
+              index={index}
+              removeThis={removeTour}
+            />
+          );
+        })}
+      </section>
     </>
   );
 };
