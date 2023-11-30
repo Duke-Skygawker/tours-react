@@ -1,6 +1,16 @@
-const url = 'https://course-api.com/react-tours-project';
+import { useState } from "react";
+import Tours from "./components/Tours";
+
+const url = "https://course-api.com/react-tours-project";
 
 const App = () => {
-  return <h2>Tours Starter</h2>;
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState(null);
+
+  return (
+    <>
+      <Tours {...data} />
+    </>
+  );
 };
 export default App;
