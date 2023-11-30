@@ -16,6 +16,7 @@ const App = () => {
         const tours = await response.json();
         console.log(tours);
         setData(tours);
+        console.log(data);
       } catch (error) {
         console.log(error);
         setIsError(true);
