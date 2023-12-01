@@ -9,7 +9,7 @@ const Tour = ({ name, info, image, price, removeThis, index }) => {
     <article className="single-tour">
       <div>
         <img className="img" src={image || logo} alt={name || "tour photo"} />
-        <p className="tour-price">{price || "$9,999"}</p>
+        <p className="tour-price">${price || "$9,999"}</p>
       </div>
       <div className="tour-info">
         <h5>{name || "Journey to the center of the Earth"}</h5>

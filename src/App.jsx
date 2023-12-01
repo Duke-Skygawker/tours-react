@@ -33,18 +33,20 @@ const App = () => {
   return (
     <>
       <main>
-        <button
+        <h1 className="title">Our Tours</h1>
+        <hr className="title-underline" />
+        {/* <button
           className="btn"
           type="button"
           onClick={() => setIsLoading(!isLoading)}
         >
           Loading Swap
-        </button>
+        </button> */}
         {isLoading ? (
           <Loading />
         ) : (
           <div>
-            <Tours {...data} />
+            <Tours array={data} />
             <button className="btn" type="button" onClick={reloadTours}>
               Reload Tour Offers
             </button>
