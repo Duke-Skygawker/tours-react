@@ -1,4 +1,3 @@
-import logo from "../../public/vite.svg";
 const Loading = () => {
   return (
     <div className="title">
