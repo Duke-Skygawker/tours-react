@@ -13,9 +13,7 @@ const App = () => {
     try {
       const response = await fetch(url);
       const tours = await response.json();
-      console.log(tours);
       setData(tours);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -35,13 +33,6 @@ const App = () => {
       <main>
         <h1 className="title">Our Tours</h1>
         <hr className="title-underline" />
-        {/* <button
-          className="btn"
-          type="button"
-          onClick={() => setIsLoading(!isLoading)}
-        >
-          Loading Swap
-        </button> */}
         {isLoading ? (
           <Loading />
         ) : (

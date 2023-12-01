@@ -2,7 +2,6 @@ import { useState } from "react";
 import Tour from "./Tour";
 
 const Tours = ({ array }) => {
-  //   array = [{}, {}, {}];
   const [data, setData] = useState(array);
   console.log(data);
 
