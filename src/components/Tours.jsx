@@ -5,23 +5,18 @@ const Tours = ({ array }) => {
   const [data, setData] = useState(array);
   console.log(data);
 
-  const removeTour = (index) => {
-    let newArr = [...data];
-    newArr.splice(index, 1);
+  const removeTour = (id) => {
+    const newArr = data.filter((tour) => tour.id !== id);
+
     setData(newArr);
   };
 
   return (
     <>
       <section className="tours">
-        {data.map((tour, index) => {
+        {data.map((tour) => {
           return (
-            <Tour
-              {...tour}
-              key={tour.id || index}
-              index={index}
-              removeThis={removeTour}
-            />
+            <Tour {...tour} key={tour.id || index} removeThis={removeTour} />
           );
         })}
       </section>

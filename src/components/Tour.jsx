@@ -3,7 +3,7 @@ import logo from "../../public/vite.svg";
 const lorem =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eius esse, aliquam, repellat unde ad debitis cumque architecto eum delectus, odio corporis sequi omnis numquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eius esse, aliquam, repellat unde ad debitis cumque architecto eum delectus, odio corporis sequi omnis numquam!";
 
-const Tour = ({ name, info, image, price, removeThis, index }) => {
+const Tour = ({ id, name, info, image, price, removeThis }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <article className="single-tour">
@@ -25,7 +25,7 @@ const Tour = ({ name, info, image, price, removeThis, index }) => {
         <button
           className="btn delete-btn"
           type="button"
-          onClick={() => removeThis(index)}
+          onClick={() => removeThis(id)}
         >
           Not interested
         </button>
